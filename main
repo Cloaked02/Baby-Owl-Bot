@@ -1,0 +1,18 @@
+    import discord
+    import asyncio
+
+    client = discord.Client()
+
+    @client.event
+    async def on_ready():
+        print('Logged in as')
+        print(client.user.name)
+        print(client.user.id)
+        print('------')
+
+    @client.event
+    async def on_message(message):
+        if message.content == "Hello":
+            await client.send_message(message.channel, "World")
+
+    client.run(<Mzg0MDEwMDY4OTU1MjM0MzE0.DPxFyw.Slp9MEzFmvl_zAvAGZT6v-3c_S8>)
